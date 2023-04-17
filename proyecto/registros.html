@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registros</title>
+	<link rel="stylesheet" type="text/css" href="css/registros.css"> 
+  <link rel="stylesheet" type="text/css" href="css/tabla.css"> 
+  <!--libreria para ajax-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	
+  <!--script ajax para cargar unicamente la tabla-->
+  <script type="text/javascript" src="js/registros.js"></script>	
+
+  <!--pdf-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.min.js"></script>
+  <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<nav>
+			<ul>
+				<li><a href="inicio.html">Inicio</a></li>
+				<li><a href="ingreso.html">Entrada / Salida</a></li>
+				<li><a href="#">Registros</a></li>
+				<li><a href="#">Contacto</a></li>
+			</ul>
+		</nav>
+		<main class="main-content">
+			<br><br>
+			<h2>Registros</h2>
+			<form method="get" action="registros.php" id="formulario">
+				<label for="search">Nombre de usuario:</label>
+				<input type="text" id="usuario" name="usuario" placeholder="Buscar...">
+				
+				<label for="search">Rango de fechas:  </label><br>
+				
+				<label style="display: inline-block;">De: 
+					<input type="date" id="fechaInicio" name="fechaInicio" value="fechaInicio">
+				</label>
+				<label style="display: inline-block;" >Hasta:
+					<input type="date" id="fechaFin" name="fechaFin" value="fechaFin">
+				</label><br><br>
+
+				<!--Se utiliza para enviar información al servidor junto con otros
+				datos del formulario. En este caso, se utiliza para enviar el valor
+				"buscar" en el parámetro "boton".-->
+				<div style="display: inline-block;">
+					<input type="hidden" name="boton" value="buscar">
+					<input type="submit" name="boton" value="buscar">
+					<input type="submit" name="boton" value="MostrarTodos">
+				</div><br><br>
+				
+       			<div align="center" id="tabla">
+					<!-- Aquí se muestra la tabla -->
+			  	</div>
+				<div align="right">
+					<button type="button" class="btn" onclick="generarPDF()">Generar PDF</button>
+				</div>
+			</form>
+		</main>
+	</div>
+	<script type="text/javascript" src="js/pdf.js"></script>	
+</body>
+</html>

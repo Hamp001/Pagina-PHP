@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Entrada / Salida</title>
+	<link rel="stylesheet" type="text/css" href="css/inicio.css"> 
+	<script type="text/javascript" src="js/ingreso.js"></script>
+</head>
+<body>
+	<div class="container">
+		<nav>
+            <ul>
+              <li><a href="inicio.html">Inicio</a></li>
+              <li><a href="#">Entrada / Salida</a></li>
+              <li><a href="registros.html">Registros</a></li>
+              <li><a href="#">Contacto</a></li>
+            </ul>
+          </nav>
+          
+		<main class="main-content">
+            <br><br>
+			<h2>Registro de entrada y salida</h2>
+			<form method="post" action="ingreso.php" onsubmit="return validarFormulario()">
+                <label for="nombre">Nombre:</label>
+				<input type="text" id="nombre" name="nombre" placeholder="usuario"><br>
+
+                <div align="center" id="error-nombre"></div><br>
+
+				<label for="password">Contrasena:</label>
+				<input type="password" id="password" name="password" placeholder="Contrasena"><br>
+
+                <div align="center" id="error-password"></div><br>
+
+				<input type="hidden" id="hora" name="hora">
+				
+                <div align="center" id="hora-y-fecha-actual"></div>
+                
+
+                
+                <div align="center">
+                    <input type="submit" name="boton" value="entrada">
+                    <input type="submit" name="boton" value="salida">
+                </div><br>
+               
+            	<div align="center" id="MSG"></div>
+                <div align="center" id="error"></div>
+
+            </form>
+            
+		</main>
+	</div>
+
+
+</body>
+</html>

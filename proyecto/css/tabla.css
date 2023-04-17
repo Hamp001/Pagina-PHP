@@ -1,0 +1,34 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 0 auto;
+    max-width:1000px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    text-align: center;
+  }
+  
+  th,
+  td {
+    padding: 12px;
+  }
+  
+  th {
+    background-color: #ff7900;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  @media screen and (max-width: 768px) {
+    table {
+      font-size: 16px;
+    }
+  }
+  

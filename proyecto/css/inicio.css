@@ -1,0 +1,147 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+  }
+  
+  h2 {
+    color: #333;
+    text-align: center;
+  }
+  
+  form {
+    width: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+  
+  input[type="submit"] {
+    background-color: #e37e18;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #717472;
+  }
+
+  #MSG{
+    color:rgb(7, 225, 102);
+    font-size: 25px;
+    font-family: Arial, sans-serif;
+  }
+  
+  #error{
+    color:red;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+  }
+  #error-nombre {
+    color:red;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+  }
+  #error-email {
+    color:red;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+  }
+  #error-password {
+    color:red;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+  }
+  #error-confirm_password {
+    color:red;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+  }
+  /*menu*/
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 15px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  nav li {
+    margin: 0 10px;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  nav a:hover {
+    background-color: #fff;
+    color: #333;
+  }
+  
+  nav a.active {
+    background-color: #fff;
+    color: #333;
+  }
+  /*
+  @media only screen and (max-width: 768px) {
+    nav {
+      flex-direction: column;
+      padding: 30px 20px;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px;
+    }
+  
+    nav li {
+      margin: 10px 0;
+    }
+  }
+  */

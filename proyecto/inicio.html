@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registro de Usuario</title>
+	<link rel="stylesheet" type="text/css" href="css/inicio.css"> 
+	<script type="text/javascript" src="js/inicio.js"></script>
+</head>
+<body>
+	<div class="container">
+		<nav>
+            <ul>
+              <li><a href="#">Inicio</a></li>
+              <li><a href="ingreso.html">Entrada / Salida</a></li>
+              <li><a href="registros.html">Registros</a></li>
+              <li><a href="#">Contacto</a></li>
+            </ul>
+          </nav>
+          
+		<main class="main-content">
+            <br><br>
+			<h2>Registro de Usuario</h2>
+			<form method="post" action="inicio.php" onsubmit="return validarFormulario()">
+				<label for="nombre">Nombre:</label>
+				<input type="text" id="nombre" name="nombre"><br>
+				<div align="center" id="error-nombre"></div><br>
+
+				<label for="email">Correo electronico:</label>
+				<input type="email" id="email" name="email"><br>
+				<div align="center" id="error-email"></div><br>
+
+				<label for="password">Contrasena:</label>
+				<input type="password" id="password" name="password"><br>
+				<div align="center" id="error-password"></div><br>
+
+				<label for="confirm_password">Confirmar Contrasena:</label>
+				<input type="password" id="confirm_password" name="confirm_password"><br>
+				<div align="center" id="error-confirm_password"></div><br>
+
+				<input type="submit" value="Registrarse">
+			</form>
+		</main>
+	</div>
+</body>
+</html>
