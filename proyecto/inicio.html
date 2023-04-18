@@ -19,6 +19,7 @@
 		<main class="main-content">
             <br><br>
 			<h2>Registro de Usuario</h2>
+			
 			<form method="post" action="inicio.php" onsubmit="return validarFormulario()">
 				<label for="nombre">Nombre:</label>
 				<input type="text" id="nombre" name="nombre"><br>
@@ -36,7 +37,9 @@
 				<input type="password" id="confirm_password" name="confirm_password"><br>
 				<div align="center" id="error-confirm_password"></div><br>
 
-				<input type="submit" value="Registrarse">
+				<input type="submit" value="Registrarse"><br><br>
+
+				<div align="center" id="mensaje"></div>
 			</form>
 		</main>
 	</div>

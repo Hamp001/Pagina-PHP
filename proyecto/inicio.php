@@ -14,14 +14,17 @@ if($_POST) {
         $sql = "INSERT INTO usuarios (usuario, email, password) VALUES ('$usuario', '$email', '$password')";
         
         if ($mysqli->query($sql) === TRUE) {
-            echo "El usuario ha sido registrado exitosamente.";
+            header("Location: inicio.html?mensaje=El usuario ha sido registrado exitosamente.");
+            //echo "El usuario ha sido registrado exitosamente.";
         } else {
-            echo "Error: " . $sql . "<br>" . $conn->error;
+            header("Location: inicio.html?mensaje=Error: " . $sql . "<br>" . $conn->error);
+            //echo "Error: " . $sql . "<br>" . $conn->error;
         }
 
         $conexion->close();
     } else {
-        echo "Los datos ingresados no son válidos.";
+        header("Location: inicio.html?mensaje=Los datos ingresados no son válidos.");
+        //echo "Los datos ingresados no son válidos.";
     }
 }
 //http://192.168.1.71:8080/PROYECTO/inicio.html
